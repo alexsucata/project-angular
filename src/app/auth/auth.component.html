@@ -1,0 +1,27 @@
+<div [ngSwitch]="authType">
+    <form *ngSwitchCase="'login'" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <input type="email" formControlName="email" placeholder="email"/>
+        <input type="password" formControlName="password" placeholder="password"/>
+        <button type="submit">Submit</button>
+        <p (click)="onViewChange('register')">Go to Register</p>
+        <p (click)="onViewChange('forgot-password')">Go to Forgotten password</p>
+        </form>
+
+        <form *ngSwitchCase="'register'" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+            <input type="email" formControlName="email" placeholder="email"/>
+            <input type="text" formControlName="name" placeholder="name"/>
+            <input type="text" formControlName="phone" placeholder="phone"/>
+            <input type="password" formControlName="password" placeholder="password"/>
+            <input type="password" formControlName="repassword" placeholder="password"/>
+            <button type="submit">Submit</button>
+
+            <p (click)="onViewChange('login')">Back to Login</p>
+            </form>
+
+            <form *ngSwitchCase="'forgot-password'" [formGroup]="resetPasswordForm" (ngSubmit)="onForgotPassword()">
+                <input type="email" formControlName="email" placeholder="email"/>
+                <button type="submit">Submit</button>
+                <p (click)="onViewChange('login')">Back to Login</p>
+            </form>
+    
+</div>

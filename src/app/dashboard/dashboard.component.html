@@ -1,0 +1,9 @@
+<form [formGroup]="movieForm" (ngSubmit)="onSave()">
+    <input type="text" formControlName="title" placeholder="title"/>
+    <input type="text" formControlName="description" placeholder="description"/>
+    <input type="number" formControlName="year" placeholder="year"/>
+    <input type="text" formControlName="director" placeholder="director"/>
+
+    <button type="submit">Submit</button>
+</form>
+<app-display-movies [moviesAttribute]="movies"(movieSelect)="onEdit(event)"></app-display-movies>

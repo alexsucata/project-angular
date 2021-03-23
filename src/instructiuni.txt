@@ -1,0 +1,25 @@
+//creare proiect cu numele project-angular
+ng new project-angular
+
+//initializare git
+merg in browser, fac un nou proiect pe pagina de git (urmaresc pasii precizati in existing folder - paragraf 3)
+
+//rulez comanda:
+ng build
+
+//stabilesc structura aplicatiei
+1. pagina de prezentare
+- lista de filme
+- formular de contact
+
+2. pagina de autentificare
+- autentificare, inregistrare, resetare parola
+
+3. pagina de administrare (dashboard)
+- adaugare - editare - stergere filme
+
+//comanda generare componenta
+ng generate component [name]
+ng g c [name]
+
+//in fisierul app.module.ts in array-ul de imports adaug FormsModule, ReactiveFormsModule
